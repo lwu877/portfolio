@@ -24,6 +24,7 @@ export default defineConfig({
     "/work/curtain-lorimer/[id]": "/projects/[id]",
     "/blog": "https://blog.lexwu.com",
     "/bio": "https://bio.lexwu.com",
+    "/curtain-lorimer": "/projects",
   },
 
   adapter: cloudflare()
