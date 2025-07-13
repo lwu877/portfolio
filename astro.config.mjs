@@ -20,8 +20,6 @@ export default defineConfig({
   },
 
   redirects: {
-    "/work/[id]": "/projects/[id]",
-    "/work/curtain-lorimer/[id]": "/projects/[id]",
     "/blog": "https://blog.lexwu.com",
     "/bio": "https://bio.lexwu.com",
     "/curtain-lorimer": "/projects",
