@@ -1,0 +1,84 @@
+---
+import Heading from '../components/about/Heading.astro';
+import Mission from '../components/about/Mission.astro';
+import Team from '../components/about/Team.astro';
+import Values from '../components/about/Values.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  description="Find more about me."
+  title="About Me · Lex Wu"
+>
+  <Heading />
+  <section class="grid grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto px-4 sm:px-6 gap-8 text-primary-950/70 dark:text-primary-200/70">
+
+    <style>
+      h2 {
+        color: black;
+        font-weight: 600;
+        font-size: 1.5rem; /* 18px */
+        line-height: 1.75rem; /* 28px */
+      }
+    </style>
+    <div class="bg-blue-500/10 dark:bg-blue-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
+      <p>
+        Hey. I'm Lex. I'm a coder, photographer, and designer based in the United States.
+      </p>
+    </div>
+
+    <a class="no-underline" href="https://lwumusic.com">
+      <div class="bg-purple-500/10 dark:bg-purple-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
+        <p>
+          In my spare time, I make music under my own name, Lex Wu. I also perform under the name lwu877, and another stage name.
+        </p>
+
+        <p class="underline">And for that, I've got a cool music website →</p>
+      </div>
+    </a>
+
+    <div class="bg-rose-500/10 dark:bg-rose-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
+      <p>
+        I'm going to Stony Brook University in New York to study journalism, where I can continue to tell stories that matter to people.
+      </p>
+    </div>
+
+    <div class="bg-blue-500/10 dark:bg-blue-400/10 gap-8 rounded-3xl px-4 py-4 justify-center row-span-2">
+      <h2 class="text-primary-900 dark:text-primary-200">Coding Skills</h2>
+      <p>
+        On the coding side, I have experience in web development, app development, and design.
+        My main focus is on web development, where I use frameworks like Astro to create fast, modern websites.
+        <br>
+        <br>
+        I'm very experienced with HTML, CSS, and JavaScript.
+      </p>
+    </div>
+
+    <div class="bg-blue-500/10 dark:bg-blue-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
+      <p>
+        I'm an expert in project management, having worked on getting projects done in a timely manner. I've even been
+        certified by ClickUp, my project management tool of choice,
+        <a href="https://verify.skilljar.com/c/6s936cjw5uzb?trk=public_profile_see-credential">as a ClickUp Expert.</a>
+      </p>
+    </div>
+
+    <div class="bg-blue-500/10 dark:bg-blue-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
+      <p>
+        I also have experience in photography, having taken photos for my own music and for my friends.
+        I'd love to take photos for you, too (if you're somewhere within the area).
+      </p>
+      <div class="flex justify-center gap-2 py-2">
+        </style>
+        <a href="https://unsplash.com/@lwu877" class="no-underline hover:font-semibold text-sm bg-blue-500 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-900 text-white px-3 py-3 rounded-full w-fit place-self-center">Unsplash</a>
+        <a href="https://www.pexels.com/@lex-wu-4619363" class="no-underline hover:font-semibold text-sm bg-blue-500 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-900 text-white px-3 py-3 rounded-full w-fit place-self-center">Pexels</a>
+      </div>
+    </div>
+
+    <div class="bg-blue-500/10 dark:bg-blue-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
+      <p>
+        <a href="https://ko-fi.com/lwu877" class="underline">Monetary donations</a> aren't required, but they are appreciated.
+      </p>
+    </div>
+
+  </section>
+</Layout>

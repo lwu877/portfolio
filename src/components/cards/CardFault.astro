@@ -1,0 +1,15 @@
+---
+const { content } = Astro.props;
+
+---
+<div class="bg-primary-500/10 dark:bg-primary-400/10 gap-8 rounded-3xl px-4 py-4 justify-center sm:gap-10 flex items-center">
+  <div class="gap-4 sm:gap-6 self-center">
+    <a href="/lyrics/memories">
+      <p class="text-primary-950/70 dark:text-primary-200/70 mx-auto max-w-2xl text-lg self-center">
+        {content}
+      </p>
+    </a>
+    <br>
+    <p class="">from the night train</p>
+  </div>
+</div>

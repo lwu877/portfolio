@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Grid from '../components/grid.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const stuff = (await getCollection('projects')).sort(
+  (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf(),
+);
+---
+
+<Layout
+  description="Projects from a person that goes on too many side quests."
+  title="Work and Projects · Lex Wu"
+>
+  <div class="py-8 gap-8">
+    <h1 class="text-center text-4xl font-bold">Works and Projects</h1>
+    <p class="text-center py-4">Projects from a person that goes on too many side quests.</p>
+  </div>
+  <!-- Hero -->
+
+  <section class="grid jusitfy-center md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-2xl px-4 text-center items-start content-stretch align-center lg:max-w-7xl lg:px-8 gap-x-8 gap-y-8">
+    {
+      stuff.map((stuff) => (
+
+        <div class="bg-blue-500/10 dark:bg-blue-400/10 flex flex-col items-start gap-8 rounded-3xl justify-center px-4 py-4">
+            <div class="flex flex-col gap-4 sm:gap-6">
+              <a class="no-underline" href={`/projects/${stuff.id}`}>
+                <img src={stuff.data.img} alt={stuff.data.imgalt} class="rounded-2xl hover:rounded-3xl aspect-square object-cover gap-4 transition transform hover:scale-110 transition-duration-50 transition-ease-in-out" />
+                <h2 class="mx-auto max-w-3xl text-3xl font-medium gap-4 py-4">{stuff.data.title}</h2>
+                <p>{stuff.data.description}</p>
+                <div class="justify-center flex gap-2 py-4">
+                  {stuff.data.skills.map((t) => <p class="text-xs bg-blue-700/10 dark:bg-blue-300/10 px-4 py-4 rounded-full w-fit place-self-center">{t}</p>).slice(0, 3)}
+                </div>
+              </a>
+              <div class="justify-center gap-2">
+                <a class="no-underline" href={stuff.data.extlink}><p class="no-underline text-white text-sm bg-blue-500 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-900 px-4 py-4 rounded-full w-full place-self-center">Visit Site</p></a>
+              </div>
+            </div>
+
+
+        </div>
+
+      ))
+    }
+
+  </section>
+
+  <Grid>
+
+  </Grid>
+</Layout>
