@@ -25,5 +25,7 @@ export default defineConfig({
     "/curtain-lorimer": "/projects",
   },
 
-  adapter: cloudflare()
+  adapter: cloudflare({
+    imageService: 'passthrough'
+  })
 });

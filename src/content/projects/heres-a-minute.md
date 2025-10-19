@@ -6,7 +6,7 @@ startDate: "2024-12-01"
 endDate: "2025-05-04"
 img: "/assets/ham-radio.png"
 imgalt: "Here's a Minute Logo"
-current: true
+current: false
 extlink: "https://heresaminute.com"
 clm: true
 ---

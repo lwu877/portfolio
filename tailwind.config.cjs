@@ -18,6 +18,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
+      mono: ['DM Mono', 'monospace'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
