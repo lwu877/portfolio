@@ -17,6 +17,7 @@
     "@astrojs/tailwind": "6.0.2",
     "@fontsource/dm-mono": "^5.2.7",
     "@fontsource/inter": "5.0.8",
+    "@swup/astro": "^1.7.0",
     "@tripetto/runner": "^8.2.0",
     "@tripetto/runner-autoscroll": "^9.0.1",
     "@tripetto/studio": "^4.0.1",
