@@ -6,8 +6,6 @@ startDate: "2025-01-01"
 endDate: "2025-06-01"
 img: "/assets/lwu-white.jpg"
 imgalt: ""
-current: true
-extlink: "https://lexwu.com"
 ---
 
 Back in 2024, I realized that my websites would work way better if I rewrote them in Astro. This is

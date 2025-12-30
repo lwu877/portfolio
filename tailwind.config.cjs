@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import sky = require('tailwindcss/colors');
+
 const colors = require('tailwindcss/colors');
 
 module.exports = {
@@ -12,13 +14,16 @@ module.exports = {
       white: '#ffffff',
       primary: colors.slate,
       blue: colors.blue,
+      sky: colors.sky,
       purple: colors.purple,
       rose: colors.rose,
-      violet: colors.violet
+      violet: colors.violet,
+      slate: colors.slate,
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      mono: ['DM Mono', 'monospace'],
+      sans: ['Geist Variable', 'sans-serif'],
+      mono: ['Geist Mono', 'monospace'],
+      display: ['Unbounded Variable', 'sans-serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],

@@ -1,12 +1,13 @@
 ---
 title: "Here's a Question"
-description: "A podcast with fun facts and writing prompts every week."
+description: "A podcast with fun facts and current events, almost every week."
 skills: [writing, editing, podcasting, project management]
 startDate: "2022-12-01"
 endDate: "2023-05-01"
 img: "/assets/haq.png"
 imgalt: "Here's a Question logo"
 current: false
+clm: true
 extlink: "https://curtainlorimer.com/projects/heres-a-question/"
 ---
 
@@ -32,4 +33,4 @@ Bold colours and a simple wordmark. Ultimately not my best design, but one that 
 
 ## Final Remarks
 
-Please don't use this as your basis of my portfolio. I've taken lessons from this little experiment and used it to write [Here's a Minute](http://lexwu.com/work/curtain-lorimer/heres-a-minute) with my friend Vian Vera. And I'm also significantly better as [a composer and producer now.](https://lwumusic.com)
+Please don't use this as your basis of my portfolio. I've taken lessons from this little experiment and used it to write [Here's a Minute](/projects/heres-a-minute) with my friend Vian Vera. And I'm also significantly better as [a composer and producer now.](https://lwumusic.com)

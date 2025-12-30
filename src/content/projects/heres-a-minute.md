@@ -6,9 +6,10 @@ startDate: "2024-12-01"
 endDate: "2025-05-04"
 img: "/assets/ham-radio.png"
 imgalt: "Here's a Minute Logo"
-current: false
+current: true
 extlink: "https://heresaminute.com"
 clm: true
+extlinkpresent: true
 ---
 I thought it'd be fun to try a podcast again - so I decided to start one with a friend.
 

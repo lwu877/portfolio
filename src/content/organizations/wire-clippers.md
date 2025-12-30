@@ -1,6 +1,7 @@
 ---
 title: "The Wire Clippers"
 description: "The Business Captain of FRC 5902"
+association: "at Portsmouth High School"
 skills: ["writing", "business"]
 startDate: "2024-09-01"
 endDate: "2025-06-01"
@@ -8,6 +9,7 @@ img: "/assets/5902.png"
 imgalt: "A group of FRC 5902 teammates cheering from the stands"
 current: false
 extlink: "https://wireclippers.org"
+extlinkpresent: true
 ---
 
 You probably wouldn't expect a robotics team to have a place for a front-end developer, but I definitely found a place for one.
