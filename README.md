@@ -68,7 +68,7 @@ Inside the project, you'll see the following folders and files:
 ├── package-lock.json
 ├── package.json
 ├── README.md
-├── tailwind.config.cjs
+├── tailwind.config.js
 └── tsconfig.json
 ```
 
@@ -80,7 +80,7 @@ Inside the project, you'll see the following folders and files:
 - `.prettierrc` - Prettier configuration file.
 - `astro.config.mjs` - Astro configuration file.
 - `package.json` - File used by JavaScript package managers to manage your dependencies. It also defines the scripts that are commonly used to run Astro.
-- `tailwind.config.cjs` - Tailwind configuration file. The theme section is where you define your color palette and fonts.
+- `tailwind.config.js` - Tailwind configuration file. The theme section is where you define your color palette and fonts.
 - `tsconfig.json` - TypeScript configuration file.
 
 ## Deployment
