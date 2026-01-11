@@ -9,6 +9,7 @@ imgalt: "Here's a Question logo"
 current: false
 clm: true
 extlink: "https://curtainlorimer.com/projects/heres-a-question/"
+status: concluded
 ---
 
 My first bout at a podcast was ultimately a failure, but it taught me a lot of things.

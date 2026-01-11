@@ -36,12 +36,13 @@ const { Content } = await render(entry);
           <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
             {entry.data.description}
           </p>
+          <p class="bg-slate-800 text-white py-4 text-center rounded-2xl border-2 border-white">status: {entry.data.status}</p>
         </div>
       </div>
     </div>
   </section>
-  <div class="justify-center align-center sm:grid-cols-2 sm:grid py-0 gap-8 px-8 max-w-full">
-      <div class="bg-white dark:bg-sky-950 flex flex-col flex-grow items-center px-16 py-16 sm:gap-10 rounded-3xl max-h-64">
+  <div class="justify-center align-center md:grid-cols-2 md:grid py-0 gap-8 px-8 max-w-full">
+      <div class="bg-white dark:bg-sky-950 flex flex-col flex-grow items-center px-16 py-16 gap-10 rounded-3xl max-h-64">
       <h2>Skills</h2>
           <div class="justify-center flex gap-2">
           {entry.data.skills.map((t) => <p class="text-xs bg-sky-50 dark:bg-sky-300/10 px-4 py-4 rounded-full w-fit place-self-center">{t}</p>)}

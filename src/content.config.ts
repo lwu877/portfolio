@@ -48,6 +48,7 @@ export const collections = {
       extlink: z.string().optional(),
       clm: z.boolean().optional(),
       extlinkpresent: z.boolean().optional(),
+      status: z.string(),
     }),
   }),
   organizations: defineCollection({

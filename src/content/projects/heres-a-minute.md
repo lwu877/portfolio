@@ -10,6 +10,7 @@ current: true
 extlink: "https://heresaminute.com"
 clm: true
 extlinkpresent: true
+status: "ongoing"
 ---
 I thought it'd be fun to try a podcast again - so I decided to start one with a friend.
 

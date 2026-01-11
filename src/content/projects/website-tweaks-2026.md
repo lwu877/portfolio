@@ -7,6 +7,7 @@ img: "/assets/lwu-white.jpg"
 imgalt: ""
 current: true
 extlink: "https://lexwu.com"
+status: ongoing
 ---
 
 While my websites were completely workable and were completely functional for all intents and purposes, there was still some elements missing

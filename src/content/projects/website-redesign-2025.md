@@ -6,6 +6,7 @@ startDate: "2025-01-01"
 endDate: "2025-06-01"
 img: "/assets/lwu-white.jpg"
 imgalt: ""
+status: concluded
 ---
 
 Back in 2024, I realized that my websites would work way better if I rewrote them in Astro. This is
