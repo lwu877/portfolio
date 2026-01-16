@@ -69,11 +69,11 @@ importers:
         specifier: 3.0.2
         version: 3.0.2
       prettier-plugin-astro:
-        specifier: 0.12.0
-        version: 0.12.0
+        specifier: 0.14.1
+        version: 0.14.1
       prettier-plugin-tailwindcss:
         specifier: 0.5.3
-        version: 0.5.3(prettier-plugin-astro@0.12.0)(prettier@3.0.2)
+        version: 0.5.3(prettier-plugin-astro@0.14.1)(prettier@3.0.2)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -98,9 +98,6 @@ packages:
     resolution: {integrity: sha512-f6iXreyJc02EhokqsoPf7D/s3tebyZ8dBNVOyY2JDY87ujft4RokVS1f+zNwNFyu0wkehC4ALUboU5z590DE4w==}
     peerDependencies:
       astro: ^5.7.0
-
-  '@astrojs/compiler@1.8.2':
-    resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
 
   '@astrojs/compiler@2.13.0':
     resolution: {integrity: sha512-mqVORhUJViA28fwHYaWmsXSzLO9osbdZ5ImUfxBarqsYdMlPbqAqGJCxsNzvppp1BEzc1mJNjOVvQqeDN8Vspw==}
@@ -4138,8 +4135,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  prettier-plugin-astro@0.12.0:
-    resolution: {integrity: sha512-8E+9YQR6/5CPZJs8XsfBw579zrwZkc0Wb7x0fRVm/51JC8Iys4lBw4ecV8fHwpbQnzve86TUa4fJ08BJzqfWnA==}
+  prettier-plugin-astro@0.14.1:
+    resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
   prettier-plugin-tailwindcss@0.5.3:
@@ -5263,8 +5260,6 @@ snapshots:
       - tsx
       - utf-8-validate
       - yaml
-
-  '@astrojs/compiler@1.8.2': {}
 
   '@astrojs/compiler@2.13.0': {}
 
@@ -9867,17 +9862,17 @@ snapshots:
       tar-fs: 2.1.4
       tunnel-agent: 0.6.0
 
-  prettier-plugin-astro@0.12.0:
+  prettier-plugin-astro@0.14.1:
     dependencies:
-      '@astrojs/compiler': 1.8.2
+      '@astrojs/compiler': 2.13.0
       prettier: 3.0.2
       sass-formatter: 0.7.9
 
-  prettier-plugin-tailwindcss@0.5.3(prettier-plugin-astro@0.12.0)(prettier@3.0.2):
+  prettier-plugin-tailwindcss@0.5.3(prettier-plugin-astro@0.14.1)(prettier@3.0.2):
     dependencies:
       prettier: 3.0.2
     optionalDependencies:
-      prettier-plugin-astro: 0.12.0
+      prettier-plugin-astro: 0.14.1
 
   prettier@2.8.8: {}
 
