@@ -45,11 +45,11 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       '@types/alpinejs':
-        specifier: 3.7.2
-        version: 3.7.2
+        specifier: 3.13.11
+        version: 3.13.11
       alpinejs:
-        specifier: 3.12.3
-        version: 3.12.3
+        specifier: 3.15.4
+        version: 3.15.4
       astro:
         specifier: 5.16.6
         version: 5.16.6(@types/node@25.0.3)(jiti@1.21.7)(rollup@2.79.2)(terser@5.44.1)(typescript@5.8.3)(yaml@2.8.2)
@@ -1930,8 +1930,8 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
-  '@types/alpinejs@3.7.2':
-    resolution: {integrity: sha512-M/PAVysvGxOlhifP/6XmO8bj5HW9w+Ygr03PdryM3tCb1KuQEaAAvVcyeZc5T75PbjH3dCzy/M/w/nJEE0FTSg==}
+  '@types/alpinejs@3.13.11':
+    resolution: {integrity: sha512-3KhGkDixCPiLdL3Z/ok1GxHwLxEWqQOKJccgaQL01wc0EVM2tCTaqlC3NIedmxAXkVzt/V6VTM8qPgnOHKJ1MA==}
 
   '@types/color-convert@2.0.4':
     resolution: {integrity: sha512-Ub1MmDdyZ7mX//g25uBAoH/mWGd9swVbt8BseymnaE18SU4po/PjmCrHxqIIRjBo3hV/vh1KGr0eMxUhp+t+dQ==}
@@ -2017,14 +2017,8 @@ packages:
   '@vue/reactivity@3.1.5':
     resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
 
-  '@vue/reactivity@3.5.26':
-    resolution: {integrity: sha512-9EnYB1/DIiUYYnzlnUBgwU32NNvLp/nhxLXeWRhHUEeWNTn1ECxX8aGO7RTXeX6PPcxe3LLuNBFoJbV4QZ+CFQ==}
-
   '@vue/shared@3.1.5':
     resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
-
-  '@vue/shared@3.5.26':
-    resolution: {integrity: sha512-7Z6/y3uFI5PRoKeorTOSXKcDj0MSasfNNltcslbFrPpcw6aXRUALq4IfJlaTRspiWIUOEZbrpM+iQGmCOiWe4A==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2045,8 +2039,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  alpinejs@3.12.3:
-    resolution: {integrity: sha512-fLz2dfYQ3xCk7Ip8LiIpV2W+9brUyex2TAE7Z0BCvZdUDklJE+n+a8gCgLWzfZ0GzZNZu7HUP8Z0z6Xbm6fsSA==}
+  alpinejs@3.15.4:
+    resolution: {integrity: sha512-lDpOdoVo0bhFjgl310k1qw3kbpUYwM/v0WByvAchsO93bl3o1rrgr0P/ssx3CimwEtNfXbmwKbtHbqTRCTTH9g==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -7017,9 +7011,7 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@types/alpinejs@3.7.2':
-    dependencies:
-      '@vue/reactivity': 3.5.26
+  '@types/alpinejs@3.13.11': {}
 
   '@types/color-convert@2.0.4':
     dependencies:
@@ -7105,13 +7097,7 @@ snapshots:
     dependencies:
       '@vue/shared': 3.1.5
 
-  '@vue/reactivity@3.5.26':
-    dependencies:
-      '@vue/shared': 3.5.26
-
   '@vue/shared@3.1.5': {}
-
-  '@vue/shared@3.5.26': {}
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -7123,7 +7109,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  alpinejs@3.12.3:
+  alpinejs@3.15.4:
     dependencies:
       '@vue/reactivity': 3.1.5
 
