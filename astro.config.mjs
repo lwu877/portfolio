@@ -32,6 +32,7 @@ export default defineConfig({
     "/blog": "https://blog.lexwu.com",
     "/bio": "https://bio.lexwu.com",
     "/curtain-lorimer": "/projects",
+    "/music": "https://lwumusic.com",
   },
 
   adapter: cloudflare({
