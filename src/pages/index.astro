@@ -30,7 +30,7 @@ const currentOrgs = (await getCollection('organizations', ({ data }) => { return
           Hey, I'm Lex 👋
         </h1>
         <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
-          Coder, journalist, designer, and musician. I create things that make the world a better place.
+          I'm a journalist, coder, photographer, videographer, and a multimedia specialist who's always looking for another project to work on.
         </p>
       </div>
     </div>
@@ -105,7 +105,7 @@ const currentOrgs = (await getCollection('organizations', ({ data }) => { return
           <span class="text-sm">{curorg.data.association}</span>
           <p>{curorg.data.description}</p>
           <div class="gap-4 flex"> 
-              {curorg.data.pagegen == !false && (
+              {curorg.data.pagegen == true && (
               <a class="button no-underline text-white bg-primary-700" href={`/organizations/${curorg.id}`}>organization info</a>
               )}
             {curorg.data.extlinkpresent == true && (
