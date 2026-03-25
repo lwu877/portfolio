@@ -80,6 +80,9 @@ importers:
       tailwindcss:
         specifier: 3.3.3
         version: 3.3.3
+      wrangler:
+        specifier: ^4.77.0
+        version: 4.77.0
 
 packages:
 
