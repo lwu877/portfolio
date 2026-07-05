@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import compress from 'astro-compress';
 import swup from '@swup/astro';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
@@ -10,7 +9,6 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    compress(),
     sitemap({
       filter: (page) => page !== 'https://lexwu.com/employers',
     }),
