@@ -15,7 +15,19 @@ import pairofDrinks from '../assets/photography/pairofdrinks.jpg';
   description="See examples of Lex Wu's photography work, ranging from nature and cityscapes to fast-paced event coverage."
   title="Photography · Lex Wu"
 >
-  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex lg:col-span-2">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h1 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Photography
+        </h1>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
+          In the right hands, a picture is worth more than a thousand words. Moments, emotions, and history, all captured in a single frame.
+          <br>
+          And I still do this for fun.
+        </p>
+      </div>
+    </div>
     <Image
       class="rounded-3xl object-cover aspect-video"
       width="1280"
@@ -34,14 +46,19 @@ import pairofDrinks from '../assets/photography/pairofdrinks.jpg';
     />
     <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex">
       <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
-        <h1 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
-          Photography
-        </h1>
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Portfolio
+        </h2>
         <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
-          In the right hands, a picture is worth more than a thousand words. Moments, emotions, and history, all captured in a single frame.
+          These are just a few bits of nature photography I've selected.
           <br>
-          And I still do this for fun.
+          Since I do this for fun, I don't feel comfortable paywalling my work at this time - so feel free to use images via Unsplash, Pexels, or Pixabay.
         </p>
+        <div class="gap-4 flex">
+        <a href="https://unsplash.com/@lwu877" class="button bg-emerald-500">Unsplash</a>
+        <a href="https://www.pexels.com/@lex-wu-4619363/" class="button bg-emerald-500">Pexels</a>
+        <a href="https://pixabay.com/users/lwu877-33326860/" class="button bg-emerald-500">Pixabay</a>
+        </div>
       </div>
     </div>
     <Image
@@ -86,8 +103,8 @@ import pairofDrinks from '../assets/photography/pairofdrinks.jpg';
     />
     <Image
       class="rounded-3xl object-cover aspect-video lg:col-span-2"
-      width="1280"
-      height="640"
+      width="1920"
+      height="1080"
       src={memorialBridge}
       alt="A bench sits in front of a shot of the Memorial Bridge in Portsmouth, NH, taken from Four Tree Island."
       loading="lazy"
