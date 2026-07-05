@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 import '@fontsource-variable/unbounded';
 import '@fontsource-variable/geist';
 import '@fontsource-variable/geist-mono';
@@ -47,7 +48,7 @@ const { description, title } = Astro.props;
 
   </head>
   <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
+    class="bg-emerald-50 text-mist-950 dark:bg-mist-950 dark:text-mist-100 antialiased transition"
   >
 
   <!-- Google Tag Manager (noscript) -->
@@ -64,11 +65,8 @@ const { description, title } = Astro.props;
       [x-cloak] {
         display: none !important;
       }
-      a {
-        text-decoration: underline;
-      }
     </style>
-    <script>
+    <script type="module">
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
 

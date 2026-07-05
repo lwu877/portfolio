@@ -5,40 +5,37 @@ const links = [
     name: 'Home',
     href: '/',
   },
-  {
+    {
     ref: '02',
+    name: 'Music',
+    href: '/music',
+  },
+  {
+    ref: '03',
+    name: 'Photography',
+    href: '/photography',
+  },
+  {
+    ref: '04',
+    name: 'Journalism',
+    href: '/journalism',
+  },
+  {
+    ref: '05',
     name: 'About Me',
     href: '/about',
   },
   {
-    ref: '03',
-    name: 'Projects',
-    href: '/projects',
-  },
-  {
-    ref: '04',
-    name: 'Organizations',
-    href: '/organizations',
-  },
-  {
-    ref: '05',
+    ref: '06',
     name: 'Contact',
     href: '/contact',
   },
-    {
-    ref: '06',
-    name: 'Music',
-    href: 'https://lwumusic.com',
-  },
 ];
 ---
-<div class="bg-rose-300 dark:bg-rose-950 text-center py-4">
-  <p>My portfolio is currently being actively developed. If you have any questions, feel free to <a href="/contact" class="underline">contact me</a> and I'll respond within 24 hours.</p>
-</div>
 <header
   x-data="{ open: false }"
   class="transition"
-  :class="{ 'bg-sky-600/25 dark:bg-sky-500/25': open, 'bg-sky-100 dark:bg-sky-900/25': !(open) }"
+  :class="{ 'bg-emerald-600/25 dark:bg-emerald-900': open, 'bg-emerald-100 dark:bg-emerald-950': !(open) }"
 >
   <div
     class="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8"
