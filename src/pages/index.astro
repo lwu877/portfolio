@@ -1,16 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import { CollectionEntry, getCollection } from 'astro:content';
-
-interface Props {
-  project: CollectionEntry<'projects'>;
-  organizations: CollectionEntry<'organizations'>;
-}
-
-const currentstuff = (await getCollection('projects', ({ data }) => { return data.current == true; }));
-
-const currentOrgs = (await getCollection('organizations', ({ data }) => { return data.current == true; }));
+import pfp from '../assets/pfp.png';
+import music from '../assets/photography/memorial-bridge.jpg';
+import journalism from '../assets/photography/flower.jpg';
+import photography from '../assets/photography/otamatone.JPG';
 ---
 
 <Layout
@@ -18,147 +12,60 @@ const currentOrgs = (await getCollection('organizations', ({ data }) => { return
   title="Lex Wu"
 >
 
-  <section class="grid lg:grid-cols-3 max-w-fit mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 py-8 ">
+  <section class="grid lg:grid-cols-3 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8">
 
     <div class="size-auto rounded-3xl">
-      <Image class="rounded-3xl object-cover aspect-video" width="1280" height="640" src="/assets/outside-pfp.jpg" alt="Lex Wu" loading="eager"/>
+      <Image class="rounded-3xl" width="1280" height="640" src={pfp} alt="Lex Wu" loading="eager"/>
     </div>
 
-    <div class="bg-sky-100 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex md:col-span-2">
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex md:col-span-2">
       <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
         <h1 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
           Hey, I'm Lex 👋
         </h1>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
+        <p class="text-lg sm:text-xl">
           I'm a journalist, coder, photographer, videographer, and a multimedia specialist who's always looking for another project to work on.
         </p>
+        <p class="text-lg sm:text-xl">
+          I currently do the following things if you wanna learn more about me:
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="grid lg:grid-cols-2 max-w-fit mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pb-8">
-    
-    <div class="bg-sky-100 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex col-span-full">
-      <div class="flex flex-col items-start gap-4 sm:gap-6">
-        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
-          Here's my current project list
-        </h2>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
-          It's a lot, I know.
-        </p>
-        <a class="button no-underline text-white bg-primary-700" href="/projects">past projects →</a>
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
+    <div class="relative w-full h-64 rounded-3xl hover:brightness-125 overflow-hidden bg-linear-to-t from-black/50 to-transparent">
+      <a href="/music">
+      <Image class="absolute inset-0 w-full h-full object-cover" width="1280" height="640" src={music} alt="Memorial Bridge" />
+      <div class="absolute inset-0"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-4">
+        <h2 class="text-white text-lg font-semibold">Music</h2>
+        <p>I perform under the starryquay and lwumusic monikers.</p>
       </div>
+      </a>
     </div>
 
-    {
-      currentstuff.map((curstuff) => (
-
-      <div class="grid md:grid-cols-3 gap-8 px-8 py-8 bg-sky-100 dark:bg-sky-400/10 rounded-3xl">
-        <div>
-          <img src={curstuff.data.img} alt={curstuff.data.imgalt} class="mx-auto rounded-t-2xl object-cover" />
-          <p class="px-2 py-2 rounded-b-2xl bg-slate-700 text-center text-white">{curstuff.data.status}</p>
+    <div class="relative w-full h-64 rounded-3xl hover:brightness-125 overflow-hidden">
+      <a href="/journalism">
+        <Image class="absolute inset-0 w-full h-full object-cover" width="1280" height="640" src={journalism} alt="Memorial Bridge" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <div class="absolute top-0 left-0 right-0 p-4">
+          <h2 class="text-white text-lg font-semibold">Journalism</h2>
+          <p>Telling unique stories that <br>entertain, educate, and inform.</p>
         </div>
-
-        
-        <div class="self-center col-span-2 gap-4 grid">
-          <h2 class="text-4xl font-semibold font-display">{curstuff.data.title}</h2>
-          <p>{curstuff.data.description}</p>
-
-          {curstuff.data.clm == true && (
-                <span class="text-sm">a <a class="font-display" href="https://curtainlorimer.com">curtain lorimer</a> project</span>
-              )}
-          <div class="gap-4 flex"> 
-            <a class="button no-underline text-white bg-primary-700" href={`/projects/${curstuff.id}`}>project info</a>
-            {curstuff.data.extlinkpresent == true && (
-               <a class="button no-underline text-white bg-primary-700" href={curstuff.data.extlink}>visit site</a> 
-              )}
-          </div>
-          
-        </div>
-      </div>
-
-      ))
-    }
-  </section>
-
-  <section class="grid lg:grid-cols-2 mx-auto px-4 items-stretch content-stretch align-center max-w-fit gap-8 lg:px-8 gap-x-8 gap-y-8 pb-8">
-     <div class="bg-sky-100 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex col-span-full">
-      <div class="flex flex-col items-start gap-4 sm:gap-6">
-        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
-          I'm actively involved with these organizations
-        </h2>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
-          The work never ends.
-        </p>
-        <a class="button no-underline text-white bg-primary-700" href="/organizations">past organizations →</a>
-      </div>
+      </a>
     </div>
 
-    {
-      currentOrgs.map((curorg) => (
-
-      <div class="grid md:grid-cols-3 gap-8 px-8 py-8 bg-sky-100 dark:bg-sky-400/10 rounded-3xl">
-        <img src={curorg.data.img} alt={curorg.data.imgalt} class="mx-auto rounded-2xl object-cover h-full" />
-        
-        <div class="self-center col-span-2 gap-4 grid">
-          <h2 class="text-4xl font-semibold font-display">{curorg.data.title}</h2>
-          <span class="text-sm">{curorg.data.association}</span>
-          <p>{curorg.data.description}</p>
-          <div class="gap-4 flex"> 
-              {curorg.data.pagegen == true && (
-              <a class="button no-underline text-white bg-primary-700" href={`/organizations/${curorg.id}`}>organization info</a>
-              )}
-            {curorg.data.extlinkpresent == true && (
-               <a class="button no-underline text-white bg-primary-700" href={curorg.data.extlink}>visit site</a> 
-              )}
-          </div>
-          
+    <div class="relative w-full h-64 rounded-3xl hover:brightness-125 overflow-hidden bg-gradient-to-t from-black/50 to-transparent">
+      <a href="/photography">
+        <Image class="absolute inset-0 w-full h-full object-cover" width="1280" height="640" src={photography} alt="Memorial Bridge" />
+        <div class="absolute inset-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+          <h2 class="text-white text-lg font-semibold">Photography</h2>
+          <p>Event and nature photography, all in one</p>
         </div>
-      </div>
-
-      ))
-    }
-  </section>
-
-  <section class="grid lg:grid-cols-2 mx-auto px-4 items-stretch content-stretch align-center max-w-fit gap-8 lg:px-8 gap-x-8 gap-y-8">
-     <div class="bg-sky-100 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex col-span-full">
-      <div class="flex flex-col items-start gap-4 sm:gap-6">
-        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
-          And I also do these things on the side
-        </h2>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-lg sm:text-xl">
-          If I told you I had sleep problems, would you believe me?
-        </p>
-      </div>
+      </a>
     </div>
-
-    <div class="grid md:grid-cols-3 gap-8 px-8 py-8 bg-violet-100 dark:bg-violet-400/10 rounded-3xl">
-        <img src="assets/outside-pfp.jpg" alt="" class="mx-auto rounded-2xl object-cover" />
-        
-        <div class="self-center col-span-2 gap-4 grid">
-          <h2 class="text-4xl font-semibold font-display">Music</h2>
-          <p>Piano for 12 years got me this far.</p>
-          <div class="gap-4 flex"> 
-            <a class="button no-underline text-white bg-primary-700" href="https://lwumusic.com">visit site</a> 
-          </div>
-          
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8 px-8 py-8 bg-slate-100 dark:bg-slate-400/10 rounded-3xl">
-        <Image src="https://pixabay.com/images/download/bridge-9236768_1920.jpg" alt="" height="480" width="480" class="mx-auto rounded-2xl object-cover aspect-square" />
-        
-        <div class="self-center col-span-2 gap-4 grid">
-          <h2 class="text-4xl font-semibold font-display">Photography</h2>
-          <p>Portraits, nature, and whatever you might need.</p>
-          <p class="text-sm">photo by Lex Wu on <a class="underline" href="https://pixabay.com/users/lwu877-33326860/">pixabay</a></p>
-          <div class="gap-4 flex"> 
-            <a class="button no-underline text-white bg-primary-700">coming soon</a> 
-          </div>
-          
-        </div>
-      </div>
-
   </section>
 
 

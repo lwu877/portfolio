@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import brooklynBridge from '../assets/photography/brooklyn-bridge.jpg';
+import cadmanPlaza from '../assets/photography/cadman-plaza.jpg';
+import flower from '../assets/photography/flower.jpg';
+import navalYard from '../assets/photography/naval-yard.jpg';
+import memorialBridge from '../assets/photography/memorial-bridge.jpg';
+import masquerade from '../assets/photography/masquerade.jpg';
+import otamatone from '../assets/photography/otamatone.jpg';
+import pairofDrinks from '../assets/photography/pairofdrinks.jpg';
+---
+
+<Layout
+  description="Contact me to learn more about my work, projects, or just to say hi!"
+  title="Contact · Lex Wu"
+>
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
+    <Image
+      class="rounded-3xl object-cover aspect-video"
+      width="1280"
+      height="640"
+      src={brooklynBridge}
+      alt="The Brooklyn Bridge, taken from the Manhattan side towards upstream of the East River"
+      loading="eager"
+    />
+    <Image
+      class="rounded-3xl object-cover aspect-video"
+      width="1280"
+      height="640"
+      src={cadmanPlaza}
+      alt="Cadman Plaza's exit sign on the Brooklyn Queens Expressway, looking towards the Brooklyn Bridge"
+      loading="eager"
+    />
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h1 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Photography
+        </h1>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
+          In the right hands, a picture is worth more than a thousand words. Moments, emotions, and history, all captured in a single frame.
+          <br>
+          And I still do this for fun.
+        </p>
+      </div>
+    </div>
+    <Image
+      class="rounded-3xl object-cover aspect-video"
+      width="1280"
+      height="640"
+      src={flower}
+      alt="A close-up of a flower"
+      loading="eager"
+    />
+    <Image
+      class="rounded-3xl object-cover aspect-video"
+      width="1280"
+      height="640"
+      src={navalYard}
+      alt="A far shot of the Portsmouth Naval Shipyard, taken from Four Tree Island in Portsmouth, NH"
+      loading="eager"
+    />
+    <Image
+      class="rounded-3xl object-cover aspect-video"
+      width="1280"
+      height="640"
+      src={masquerade}
+      alt="A photo of masquerade masks on a table, taken at the Masquerade Ball for Wolfie's Big Band"
+      loading="eager"
+    />
+    <Image
+      class="rounded-3xl object-cover aspect-video"
+      width="1280"
+      height="640"
+      src={otamatone}
+      alt="A photo of an otamatone, a Japanese musical instrument, taken at the Masquerade Ball for Wolfie's Big Band"
+      loading="lazy"
+    />
+    <Image
+      class="rounded-3xl object-cover aspect-video"
+      width="1280"
+      height="640"
+      src={pairofDrinks}
+      alt="A pair of drinks. One has an umbrella."
+      loading="lazy"
+    />
+    <Image
+      class="rounded-3xl object-cover aspect-video lg:col-span-2"
+      width="1280"
+      height="640"
+      src={memorialBridge}
+      alt="A bench sits in front of a shot of the Memorial Bridge in Portsmouth, NH, taken from Four Tree Island."
+      loading="lazy"
+    />
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex lg:col-span-2">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Want me for your event?
+        </h2>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
+          <a class="underline" href="/contact">Reach out and let's discuss!</a> I work in Stony Brook, NY during the fall and spring, and in Portsmouth, NH during the summer and winter.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+---
+
+<Layout
+  description="Contact me to learn more about my work, projects, or just to say hi!"
+  title="Contact · Lex Wu"
+>
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex md:col-span-2">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h1 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Journalism
+        </h1>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
+          I've only just begun.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          School
+        </h2>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
+          I'm currently studying journalism at Stony Brook University, where I have the opportunity to write for the Statesman and gather more knowledge about how to tell better stories.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Experience
+        </h2>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
+          I've written for the Stony Brook Statesman, one of a few student-run newspapers at Stony Brook. I was also the News & Features Editor and an Arts Reporter for the PHS PaperClip, my high school's newspaper.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex lg:col-span-2">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Selected Stories
+        </h2>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-lg sm:text-xl">
+          I'm used to telling... somewhat interesting stories. These are a few of them.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex  hover:scale-105% transition-transform duration-300">
+      <a href="https://sbstatesman.com/138791/news/campus-landmarks-defaced-with-urine-and-feces-as-a-result-of-a-tiktok-trend/">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <img src="https://sbstatesman.com/wp-content/uploads/2025/10/psitter.jpg" class="aspect-video rounded-3xl object-cover">
+        <h2 class="text-xl font-medium sm:text-2xl lg:text-4xl font-display">
+          Campus landmarks defaced with urine and feces as a result of a TikTok trend
+        </h2>
+        <p class="text-slate-950/70 dark:text-slate-200/70 text-md sm:text-lg">
+          First story I ever wrote for the Statesman, cowritten with Humza Malik due to me suffering an injury during editing.
+        </p>
+      </div>
+      </a>
+    </div>
+  </section>
+
+</Layout>

@@ -1,41 +1,55 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import compress from 'astro-compress';
-import pagefind from 'astro-pagefind';
-import swup from '@swup/astro'
-import mdx from '@astrojs/mdx';
-
+import swup from '@swup/astro';
 import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
+import cloudflare from '@astrojs/cloudflare';
 
-import cloudflare from "@astrojs/cloudflare";
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lexwu.com',
-  experimental: {},
-  integrations: [tailwind(), compress(), pagefind(), mdx(), sitemap(), swup({
-    theme: 'fade',
+  integrations: [
+    compress(),
+    sitemap({
+      filter: (page) => page !== 'https://lexwu.com/employers',
+    }),
+    mdx(),
+    swup({
+      theme: ['fade', { duration: '0.2s' }],
       cache: true,
       preload: {
-        visible: true
+        visible: true,
       },
       morph: ['header', 'footer'],
       progress: true,
       smoothScrolling: true,
-  })],
+    }),
+  ],
 
   build: {
-    format: "file",
+    format: 'file',
   },
 
-  redirects: {
-    "/blog": "https://blog.lexwu.com",
-    "/bio": "https://bio.lexwu.com",
-    "/curtain-lorimer": "/projects",
-    "/music": "https://lwumusic.com",
-  },
+  site: 'https://lexwu.com',
 
   adapter: cloudflare({
-    imageService: 'passthrough'
-  })
+    imageService: 'passthrough',
+    session: false,
+  }),
+
+  redirects: {
+    '/bio': {
+      status: 301,
+      destination: 'https://bio.lexwu.com',
+    },
+    '/listen': {
+      status: 301,
+      destination: '/discography',
+    },
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

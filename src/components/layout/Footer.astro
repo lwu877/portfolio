@@ -31,6 +31,26 @@ const bottomLinks = [
     ],
   },
   {
+    header: 'Ventures',
+    links: [
+      {
+        name: 'Music',
+        href: '/music',
+        isExternal: false,
+      },
+      {
+        name: 'Photography',
+        href: '/photography',
+        isExternal: false,
+      },
+      {
+        name: 'Journalism',
+        href: '/journalism',
+        isExternal: false,
+      },
+    ],
+  },
+  {
     header: 'About Me',
     links: [
       {
@@ -44,16 +64,6 @@ const bottomLinks = [
         isExternal: false,
       },
       {
-        name: 'Projects',
-        href: '/projects',
-        isExternal: false,
-      },
-      {
-        name: 'Organizations',
-        href: '/organizations',
-        isExternal: false,
-      },
-      {
         name: 'Contact',
         href: '/contact',
         isExternal: false,
@@ -61,16 +71,26 @@ const bottomLinks = [
     ],
   },
   {
-    header: 'Other Sites',
+    header: 'Other Ventures',
     links: [
       {
-        name: 'Music',
+        name: 'In Progress',
+        href: 'https://inprogress.lexwu.com',
+        isExternal: true,
+      },
+      {
+        name: 'lwumusic',
         href: 'https://lwumusic.com',
         isExternal: true,
       },
       {
-        name: 'Blog',
-        href: 'https://blog.lexwu.com',
+        name: 'starryquay',
+        href: 'https://starryquay.com',
+        isExternal: true,
+      },
+      {
+        name: 'Curtain Lorimer',
+        href: 'https://curtainlorimer.com',
         isExternal: true,
       },
     ],
@@ -81,7 +101,7 @@ import '@fontsource-variable/geist'
 ---
 
 <footer
-  class="bg-sky-100 dark:bg-sky-900/25 mt-16 py-16 lg:mt-20 lg:py-20"
+  class="bg-emerald-100 dark:bg-emerald-950 mt-16 py-16 lg:mt-20 lg:py-20"
   aria-labelledby="footer-heading"
 >
   <h2 id="footer-heading" class="sr-only">Footer</h2>
@@ -93,12 +113,13 @@ import '@fontsource-variable/geist'
           width="65"
           height="40"
           :src="$store.theme.isDark ? '/assets/lwu-whitecon.svg' : '/assets/lwu-blackcon.svg'"
-          alt="Stone"
+          alt="Lex Wu - Logo"
+          loading="lazy"
         />
         <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
           "Quite possibly one of the least average people you'll ever meet."
         </p>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2025 Lex Wu / all rights reserved <br> <br>
+        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2026 Lex Wu / all rights reserved <br> <br>
           <span class="underline"><a href="/privacy">Privacy Policy</a></span> / <span class="underline"><a href="/licenses.txt">Licenses</a></span>
         </p>
       </div>
@@ -138,6 +159,7 @@ import '@fontsource-variable/geist'
                           viewBox="0 0 24 24"
                           fill="currentColor"
                           aria-hidden="true"
+                          loading="lazy"
                         >
                           <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
                         </svg>

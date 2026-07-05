@@ -1,86 +1,45 @@
 ---
-import Heading from '../components/about/Heading.astro';
-import Mission from '../components/about/Mission.astro';
-import Team from '../components/about/Team.astro';
-import Values from '../components/about/Values.astro';
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import pfp from '../assets/pfp.png';
 ---
 
 <Layout
   description="Find more about me."
   title="About Me · Lex Wu"
 >
-  <Heading />
-  <section class="grid grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto px-4 sm:px-6 gap-8 text-primary-950/70 dark:text-primary-200/70">
 
-    <style>
-      h2 {
-        color: black;
-        font-weight: 600;
-        font-size: 1.5rem; /* 18px */
-        line-height: 1.75rem; /* 28px */
-      }
-    </style>
-    <div class="bg-sky-500/10 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
-      <p>
-        Hey. I'm Lex. I'm a coder, photographer, and designer based in the United States.
-      </p>
-      <p>
-        Where I'm located is always a bit iffy at any singular point in time, but you'll generally find me on the streets of Portsmouth or somewhere in New York.
-      </p>
-    </div>
 
-    <a class="no-underline" href="https://lwumusic.com">
-      <div class="bg-purple-500/10 dark:bg-purple-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
-        <p>
-          In my spare time, I make music under my own name, Lex Wu. I also perform under the name lwu877, and another stage name.
+  <section class="grid max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 gap-x-8 gap-y-8 pt-8">
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex">
+      <div class="flex max-w-xl flex-col items-start gap-4 sm:gap-6">
+        <h1 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          About Me
+        </h1>
+        <p class="text-lg sm:text-xl">
+          Learn more about a person that does way too much stuff.
         </p>
-
-        <p class="underline">And for that, I've got a cool music website →</p>
-      </div>
-    </a>
-
-    <div class="bg-rose-500/10 dark:bg-rose-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
-      <p>
-        I'm studying journalism at Stony Brook University, and I'm looking to graduate in 2029.
-      </p>
-    </div>
-
-    <div class="bg-sky-500/10 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 justify-center row-span-2">
-      <h2 class="text-primary-900 dark:text-primary-200">Coding Skills</h2>
-      <p>
-        On the coding side, I have experience in web development, app development, and design.
-        My main focus is on web development, where I use frameworks like Astro to create fast, modern websites.
-        <br>
-        <br>
-        I'm very experienced with HTML, CSS, and JavaScript.
-      </p>
-    </div>
-
-    <div class="bg-sky-500/10 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
-      <p>
-        I'm an expert in project management, having worked on getting projects done in a timely manner. I've even been
-        certified by ClickUp, my project management tool of choice,
-        <a href="https://verify.skilljar.com/c/6s936cjw5uzb?trk=public_profile_see-credential">as a ClickUp Expert.</a>
-      </p>
-    </div>
-
-    <div class="bg-sky-500/10 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
-      <p>
-        I also have experience in photography, having taken photos for my own music and for my friends.
-        I'd love to take photos for you, too (if you're somewhere within the area).
-      </p>
-      <div class="flex justify-center gap-2 py-2">
-        </style>
-        <a href="https://unsplash.com/@lwu877" class="no-underline hover:font-semibold text-sm bg-sky-500 dark:bg-sky-700 hover:bg-sky-700 dark:hover:bg-sky-900 text-white px-3 py-3 rounded-full w-fit place-self-center">Unsplash</a>
-        <a href="https://www.pexels.com/@lex-wu-4619363" class="no-underline hover:font-semibold text-sm bg-sky-500 dark:bg-sky-700 hover:bg-sky-700 dark:hover:bg-sky-900 text-white px-3 py-3 rounded-full w-fit place-self-center">Pexels</a>
       </div>
     </div>
+  </section>
 
-    <div class="bg-sky-500/10 dark:bg-sky-400/10 gap-8 rounded-3xl px-4 py-4 justify-center">
+  <section class="grid md:grid-cols-2 gap-8 py-8 px-4 w-full content-start mx-auto max-w-7xl">
+
+    <div class="gap-4 grid text-primary-950/70 dark:text-primary-200/70 content-start h-fit bg-emerald-100 dark:bg-emerald-800/25 rounded-3xl px-4 py-4 h-full">
       <p>
-        <a href="https://ko-fi.com/lwu877" class="underline">Monetary donations</a> aren't required, but they are appreciated.
+        Lex Wu (they/them) is a musician, artist, journalist, photographer, writer, videographer, and... realistically, whatever else they want to be.
       </p>
+      <p>
+        Always searching for the next thing to work or improve on, their goal is a singular one: to tell important stories that entertain, educate, and inspire.
+      </p>
+      <p>
+        Lex has realized they truly do dislike writing about themselves in the third person.
+      </p>
+    </div>
+
+    <div class="w-full h-full gap-8 grid">
+      <Image src={pfp} alt="An image of starryquay looking upwards and to the left against a dark blue sky." class="object-cover w-full h-full rounded-3xl" width="1280" height="1280" />
     </div>
 
   </section>
