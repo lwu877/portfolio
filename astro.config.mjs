@@ -34,7 +34,7 @@ export default defineConfig({
   site: 'https://lexwu.com',
 
   adapter: cloudflare({
-    imageService: 'passthrough',
+    imageService: 'compile',
     session: false,
   }),
 
