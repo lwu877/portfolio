@@ -14,8 +14,8 @@ import photography from '../assets/photography/otamatone.jpg';
 
   <section class="grid lg:grid-cols-3 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8">
 
-    <div class="size-auto rounded-3xl">
-      <Image class="rounded-3xl" width="1280" height="640" src={pfp} alt="Lex Wu" loading="eager"/>
+    <div class="size-auto">
+      <Image class="rounded-3xl" width="1080" src={pfp} alt="Lex Wu" loading="eager"/>
     </div>
 
     <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex md:col-span-2">
@@ -34,10 +34,10 @@ import photography from '../assets/photography/otamatone.jpg';
   </section>
 
   <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
-    <div class="relative w-full h-64 rounded-3xl hover:brightness-125 overflow-hidden bg-linear-to-t from-black/50 to-transparent">
+    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-100 overflow-hidden">
       <a href="/music">
-      <Image class="absolute inset-0 w-full h-full object-cover" width="1280" height="640" src={music} alt="Memorial Bridge" />
-      <div class="absolute inset-0"></div>
+      <Image class="absolute inset-0 w-full h-full object-cover" width="1920" loading="eager" src={music} alt="Memorial Bridge" />
+      <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
       <div class="absolute bottom-0 left-0 right-0 p-4">
         <h2 class="text-white text-lg font-semibold">Music</h2>
         <p class="text-white">I perform under the starryquay and lwumusic monikers.</p>
@@ -45,21 +45,21 @@ import photography from '../assets/photography/otamatone.jpg';
       </a>
     </div>
 
-    <div class="relative w-full h-64 rounded-3xl hover:brightness-125 overflow-hidden">
+    <div class="relative w-full h-64 lg:row-span-2 lg:h-136 rounded-3xl hover:scale-105 duration-100 overflow-hidden">
       <a href="/journalism">
-        <Image class="absolute inset-0 w-full h-full object-cover" width="1280" height="640" src={journalism} alt="Memorial Bridge" />
-        <div class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
-        <div class="absolute top-0 left-0 right-0 p-4">
+        <Image class="absolute inset-0 w-full h-full object-cover" width="1280" loading="eager" src={journalism} alt="Flower" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
           <h2 class="text-white text-lg font-semibold">Journalism</h2>
-          <p class="text-white">Telling unique stories that <br>entertain, educate, and inform.</p>
+          <p class="text-white">Telling unique stories that entertain, educate, and inform.</p>
         </div>
       </a>
     </div>
 
-    <div class="relative w-full h-64 rounded-3xl hover:brightness-125 overflow-hidden bg-linear-to-t from-black/50 to-transparent">
+    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-100 overflow-hidden">
       <a href="/photography">
-        <Image class="absolute inset-0 w-full h-full object-cover" width="1280" height="640" src={photography} alt="Memorial Bridge" />
-        <div class="absolute inset-0"></div>
+        <Image class="absolute inset-0 w-full h-full object-cover" loading="eager" width="1280" src={photography} alt="Otamatone" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 p-4">
           <h2 class="text-white text-lg font-semibold">Photography</h2>
           <p class="text-white">Event and nature photography, all in one</p>
