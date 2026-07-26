@@ -14,7 +14,7 @@ export default defineConfig({
     }),
     mdx(),
     swup({
-      theme: ['fade', { duration: '0.2s' }],
+      theme: ['fade', { duration: '0.2s'}],
       cache: true,
       preload: {
         visible: true,
