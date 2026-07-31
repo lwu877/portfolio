@@ -14,7 +14,7 @@
     "@alpinejs/collapse": "3.12.3",
     "@astrojs/cloudflare": "^14.1.4",
     "@astrojs/markdown-remark": "^7.2.1",
-    "@astrojs/mdx": "^7.0.3",
+    "@astrojs/mdx": "^7.0.5",
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource-variable/geist": "^5.2.9",
     "@fontsource-variable/geist-mono": "^5.2.8",
