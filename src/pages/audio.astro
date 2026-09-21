@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import hamradio from '../assets/ham-radio.png';
+---
+
+<Layout
+  description="Explore Lex Wu’s audio production work, including podcasts, sound design, editing, mixing, and music production for creative media projects."
+  title="Audio · Lex Wu"
+>
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex md:col-span-2">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h1 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Audio
+        </h1>
+        <p class="text-mist-950/70 dark:text-mist-200/70 text-lg sm:text-xl">
+          Podcasting, mixing, mastering, and the works
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Production
+        </h2>
+        <p class="text-mist-950/70 dark:text-mist-200/70 text-lg sm:text-xl">
+          I've handled writing, editing, mixing, and mastering for both music and podcasts.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Distribution
+        </h2>
+        <p class="text-mist-950/70 dark:text-mist-200/70 text-lg sm:text-xl">
+          I work with distributors like Spotify for Podcasters, Routenote, and Audiowundr to ensure projects worked on by me are shared to the world effectively.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex lg:col-span-2">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <h2 class="text-3xl font-medium sm:text-5xl lg:text-6xl font-display">
+          Selected Projects
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8">
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex hover:scale-105 transition-transform duration-300">
+      <a href="https://heresaminute.com">
+      <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+        <Image src={hamradio} alt="Here's a Minute banner" class="aspect-video rounded-3xl object-cover" />
+        <h2 class="text-xl font-medium sm:text-2xl lg:text-4xl font-display">
+          Here's a Minute
+        </h2>
+        <p class="rounded-3xl text-sm bg-emerald-500 p-2">Podcast</p>
+        <p class="text-mist-950/70 dark:text-mist-200/70 text-md sm:text-lg">
+          A podcast I co-hosted alongside Vian Vera about creative writing. I handled production, editing, mixing, and distribution.
+        </p>
+      </div>
+      </a>
+    </div>
+<!--
+    <div class="bg-emerald-100 dark:bg-emerald-800/25 gap-8 rounded-3xl px-4 py-4 sm:gap-10 flex hover:scale-105 transition-transform duration-300">
+      <a href="https://starryquay.com">
+        <div class="flex w-full flex-col items-start gap-4 sm:gap-6">
+          <Image src={hamradio} alt="Here's a Minute banner" class="aspect-video rounded-3xl object-cover" />
+          <h2 class="text-xl font-medium sm:text-2xl lg:text-4xl font-display">
+            Bridge to Nowhere
+          </h2>
+          <p class="rounded-3xl text-sm bg-emerald-500 p-2">Music</p>
+          <p class="text-mist-950/70 dark:text-mist-200/70 text-md sm:text-lg">
+            A musical project built in-house. I composed, arranged, mixed, mastered, and self-distributed the work.
+          </p>
+        </div>
+      </a>
+    </div>
+    -->
+  </section>
+
+</Layout>

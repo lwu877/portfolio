@@ -5,11 +5,92 @@ import pfp from '../assets/pfp.png';
 import music from '../assets/photography/memorial-bridge.jpg';
 import journalism from '../assets/photography/flower.jpg';
 import photography from '../assets/photography/otamatone.jpg';
+import audio from '../assets/photography/french-city.jpg';
+
+import { XMLParser } from 'fast-xml-parser';
+
+const rssUrl = 'https://inprogress.lexwu.com/rss.xml';
+
+type LatestPost = {
+  description: string;
+  dateLabel: string;
+  link?: string;
+};
+
+const latestPost: LatestPost = {
+  description: 'Latest post unavailable right now.',
+  dateLabel: 'Unknown date',
+};
+
+try {
+  const response = await fetch(rssUrl, {
+    headers: {
+      accept: 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
+    },
+  });
+
+  if (response.ok) {
+    const xml = await response.text();
+    const parser = new XMLParser({
+      ignoreAttributes: false,
+      removeNSPrefix: true,
+    });
+
+    const feed = parser.parse(xml);
+    const item = feed?.rss?.channel?.item?.[0] ?? feed?.rss?.channel?.item ?? feed?.feed?.entry?.[0];
+
+    const rawDescription = item?.description ?? item?.summary ?? item?.content ?? item?.['content:encoded'];
+    const rawDate = item?.pubDate ?? item?.published ?? item?.updated;
+    const rawLink = item?.link?.href ?? item?.link ?? item?.id;
+
+    const normalizedLink = (() => {
+      if (typeof rawLink !== 'string' || !rawLink.trim()) return undefined;
+
+      const linkValue = rawLink.trim();
+
+      try {
+        const url = new URL(linkValue, rssUrl);
+        const slug = url.pathname.split('/').filter(Boolean).at(-1);
+
+        if (slug) {
+          url.pathname = `/writings/${slug}`;
+          return url.toString();
+        }
+
+        return url.toString();
+      } catch {
+        const slug = linkValue.replace(/^\/+/, '').split('/').filter(Boolean).at(-1);
+
+        return slug ? `https://inprogress.lexwu.com/writing/${slug}` : undefined;
+      }
+    })();
+
+    if (typeof rawDescription === 'string' && rawDescription.trim()) {
+      latestPost.description = rawDescription.trim();
+    }
+
+    if (typeof rawDate === 'string' && rawDate.trim()) {
+      const parsedDate = new Date(rawDate);
+      latestPost.dateLabel = Number.isNaN(parsedDate.getTime())
+        ? rawDate.trim()
+        : new Intl.DateTimeFormat('en', {
+          dateStyle: 'medium',
+          timeZone: 'UTC',
+        }).format(parsedDate);
+    }
+
+    if (normalizedLink) {
+      latestPost.link = normalizedLink;
+    }
+  }
+} catch {
+  // Keep the fallback copy if the feed can't be loaded during build or preview.
+}
 ---
 
 <Layout
   description="A musician who does too much other stuff."
-  title="Lex Wu - Journalist, Photographer, & Digital Creator"
+  title="Lex Wu"
 >
 
   <section class="grid lg:grid-cols-3 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8">
@@ -24,7 +105,7 @@ import photography from '../assets/photography/otamatone.jpg';
           Hey, I'm Lex 👋
         </h1>
         <p class="text-lg sm:text-xl">
-          I'm a journalist, coder, photographer, videographer, and a multimedia specialist who's always looking for another project to work on.
+          I'm a journalist, musician, photographer, and creative developing stories through writing, sound, photography, and digital experiences.
         </p>
         <p class="text-lg sm:text-xl">
           I currently do the following things if you wanna learn more about me:
@@ -34,7 +115,7 @@ import photography from '../assets/photography/otamatone.jpg';
   </section>
 
   <section class="grid lg:grid-cols-2 max-w-7xl mx-auto px-4 items-stretch content-stretch align-center gap-8 lg:px-8 gap-x-8 gap-y-8 pt-8 ">
-    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-100 overflow-hidden">
+    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-300 overflow-hidden">
       <a href="/music">
       <Image class="absolute inset-0 w-full h-full object-cover" width="1920" loading="eager" src={music} alt="Memorial Bridge" />
       <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
@@ -45,7 +126,7 @@ import photography from '../assets/photography/otamatone.jpg';
       </a>
     </div>
 
-    <div class="relative w-full h-64 lg:row-span-2 lg:h-136 rounded-3xl hover:scale-105 duration-100 overflow-hidden">
+    <div class="relative w-full h-64 lg:row-span-2 lg:h-136 rounded-3xl hover:scale-105 duration-300 overflow-hidden">
       <a href="/journalism">
         <Image class="absolute inset-0 w-full h-full object-cover" width="1280" loading="eager" src={journalism} alt="Flower" />
         <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
@@ -56,7 +137,7 @@ import photography from '../assets/photography/otamatone.jpg';
       </a>
     </div>
 
-    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-100 overflow-hidden">
+    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-300 overflow-hidden">
       <a href="/photography">
         <Image class="absolute inset-0 w-full h-full object-cover" loading="eager" width="1280" src={photography} alt="Otamatone" />
         <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
@@ -66,6 +147,53 @@ import photography from '../assets/photography/otamatone.jpg';
         </div>
       </a>
     </div>
+
+    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-300 overflow-hidden">
+      <a href="/audio">
+        <Image class="absolute inset-0 w-full h-full object-cover" loading="eager" width="1280" src={audio} alt="Otamatone" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+          <h2 class="text-white text-lg font-semibold">Audio</h2>
+          <p class="text-white">Podcasting, mixing, mastering, and the works</p>
+        </div>
+      </a>
+    </div>
+<!--
+    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-300 overflow-hidden">
+      <a href="/photography">
+        <Image class="absolute inset-0 w-full h-full object-cover" loading="eager" width="1280" src={photography} alt="Otamatone" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4">
+          <h2 class="text-white text-lg font-semibold">Web Management and Design</h2>
+          <p class="text-white">Astro, WordPress, and other design bits</p>
+        </div>
+      </a>
+    </div>
+    -->
+
+    <div class="relative w-full h-64 rounded-3xl hover:scale-105 duration-300 overflow-hidden">
+      <a href={latestPost.link}>
+        <div class="absolute inset-0 w-full h-full object-cover bg-emerald-950" loading="eager" width="1280" src={photography} alt="Otamatone" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
+        <div class="absolute top-0 left-0 right-0 p-4">
+          <h2 class="text-white text-lg font-semibold">What I'm working on</h2>
+          <p class="text-white text-sm">as of {latestPost.dateLabel}</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 flex items-center gap-2">
+          <p class="text-white flex-1">{latestPost.description}</p>
+          <svg
+            class="h-4 w-4 flex-shrink-0"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            aria-hidden="true"
+            loading="lazy"
+          ><path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
+          </svg>
+        </div>
+      </a>
+    </div>
+
   </section>
 
 
