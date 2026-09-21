@@ -33,9 +33,10 @@ const links = [
 ];
 ---
 <header
-  x-data="{ open: false }"
-  class="transition"
-  :class="{ 'bg-emerald-600/25 dark:bg-emerald-900': open, 'bg-emerald-100 dark:bg-emerald-950': !(open) }"
+  x-data="{ open: false, scrolled: false }"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+  @scroll.window="scrolled = window.scrollY > 50"
+  :class="{ 'bg-emerald-200 dark:bg-emerald-900': open, 'bg-emerald-200/50 dark:bg-emerald-950/50': !(open), 'backdrop-blur-sm ': scrolled }"
 >
   <div
     class="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8"
