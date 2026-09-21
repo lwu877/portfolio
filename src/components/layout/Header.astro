@@ -19,9 +19,9 @@ const links = [
 ---
 <header
   x-data="{ open: false, scrolled: false }"
-  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-sm"
   @scroll.window="scrolled = window.scrollY > 50"
-  :class="{ 'bg-emerald-200 dark:bg-emerald-900': open, 'bg-emerald-200/50 dark:bg-emerald-950/50': !(open), 'backdrop-blur-sm ': scrolled }"
+  :class="{ 'bg-emerald-200 dark:bg-emerald-900': open, 'bg-emerald-200/50 dark:bg-emerald-950/50': !(open) }"
 >
   <div
     class="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:max-w-7xl lg:px-8"
@@ -41,7 +41,7 @@ const links = [
           :src="$store.theme.isDark ? '/assets/lwu-whitecon.svg' : '/assets/lwu-blackcon.svg'"
           alt="Lex Wu Logo"
         />
-          <p class="px-4 text-lg font-light font-display" x-collapse x-show="!open">Lex Wu</p>
+          <p class="px-4 text-lg font-light font-display">Lex Wu</p>
         </div>
       </a>
     </div>
