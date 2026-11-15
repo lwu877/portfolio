@@ -24,6 +24,9 @@ export default defineConfig({
       smoothScrolling: true,
     }),
   ],
+  image: {
+    domains: ["dir.lexwu.com"],
+  },
 
   build: {
     format: 'file',
